@@ -10,12 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_05_185251) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_05_190916) do
   create_table "collections", charset: "utf8mb4", force: :cascade do |t|
     t.string "client"
     t.string "product"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "path_id", null: false
+    t.index ["path_id"], name: "index_collections_on_path_id"
   end
 
   create_table "deliveries", charset: "utf8mb4", force: :cascade do |t|
@@ -23,6 +25,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_05_185251) do
     t.string "product"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "path_id", null: false
+    t.index ["path_id"], name: "index_deliveries_on_path_id"
   end
 
   create_table "itineraries", charset: "utf8mb4", force: :cascade do |t|
@@ -36,6 +40,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_05_185251) do
     t.string "arrival"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "itinerary_id"
+    t.index ["itinerary_id"], name: "index_paths_on_itinerary_id"
   end
 
+  add_foreign_key "collections", "paths"
+  add_foreign_key "deliveries", "paths"
+  add_foreign_key "paths", "itineraries"
 end
