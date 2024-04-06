@@ -13,6 +13,7 @@ To run the project locally, use the following command:
 
 ```bash
 rails s
+```
 
 
 ## Running tests
@@ -21,4 +22,5 @@ To run the tests, use the following command:
 
 ```bash
 rspec spec
+```
 
