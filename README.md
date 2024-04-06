@@ -1,11 +1,24 @@
-Api documentation
+# API Documentation
 
-Models:
+## Models
 
-ruta => Itinerary
+* **Itinerary**: (ruta).
+* **Path**: (Viajes).
+* **Delivery**: (entregas).
+* **Collection**: (retiros).
 
-viajes => Path
+## Running the Project
 
-entregas => Delivery
+To run the project locally, use the following command:
 
-retiros => Collection
+```bash
+rails s
+
+
+## Running tests
+
+To run the tests, use the following command:
+
+```bash
+rspec spec
+
