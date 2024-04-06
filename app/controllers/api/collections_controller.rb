@@ -55,7 +55,7 @@ module Api
     end
 
     def collection_params
-      params.require(:collection).permit(:name, :description)
+      params.require(:collection).permit(:client, :product)
     end
   end
 end
