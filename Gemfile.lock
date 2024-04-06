@@ -77,12 +77,14 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
+    awesome_print (1.9.2)
     base64 (0.2.0)
     bigdecimal (3.1.7)
     bindex (0.8.1)
     bootsnap (1.18.3)
       msgpack (~> 1.2)
     builder (3.2.4)
+    byebug (11.1.3)
     capybara (3.40.0)
       addressable
       matrix
@@ -274,7 +276,9 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  awesome_print
   bootsnap
+  byebug
   capybara
   debug
   faker

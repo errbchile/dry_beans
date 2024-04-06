@@ -48,6 +48,8 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
   gem 'rspec-rails', '~> 6.0.0'
+  gem 'byebug'
+  gem 'awesome_print'
 end
 
 group :development do
