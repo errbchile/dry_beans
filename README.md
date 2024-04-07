@@ -24,3 +24,12 @@ To run the tests, use the following command:
 rspec spec
 ```
 
+
+## Dummy Data
+
+To add dummy data, use the following command:
+
+```bash
+rails db:seed
+```
+
